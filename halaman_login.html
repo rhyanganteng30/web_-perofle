@@ -1,89 +1,142 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form login</title>
-    <!-- Bootstrap 5 css -->
-     <link
-     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-     rel="stylesheet"
-     >
-     <style>
+    <title>Halaman Login</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
         body {
-            background:linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .card {
-          border: none;
-          border-radius: 12px;  
+
+        .login-card {
+            width: 100%;
+            max-width: 380px;
+            border: none;
+            border-radius: 15px;
         }
-     </style>
+
+        .login-title {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .form-control {
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .btn-login {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .btn-login:hover {
+            background: #5365d5;
+            color: white;
+        }
+    </style>
 </head>
-<body class="bg-light">
+
+<body>
 
     <div class="container">
-        <div class="row justify-content-center align-items-center vh-100">
-            <div class="col-md-4">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-8 col-md-5 col-lg-4">
 
-            <div class="card shadow-sm">
-              <div class="card-body p-4">
+                <div class="card login-card shadow-lg">
+                    <div class="card-body p-4">
 
-                <h4 class="text-center mb-4">login</h4>
+                        <h3 class="text-center login-title mb-2">
+                            Login
+                        </h3>
 
-                <form action="#" method="POST">
+                        <p class="text-center text-muted mb-4">
+                            Silakan masuk ke akun Anda
+                        </p>
 
-                    <!-- email -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="nama@email.com"
-                        requidred
-                        >
-                        </div>
+                        <form action="#" method="POST">
 
-                        <!-- passsword -->
-                    </div> class="mb-3">
-                        <Label for="password" class="form label">Email</Label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="password"
-                          name="password"
-                          placeholder="Masukkan password"
-                          requidred
-                          >
-                          </div>
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email
+                                </label>
 
-                          <!-- Remember Me -->
-                           <div class="mb-3 form-check">
-                             <input
-                             type="checkbox"
-                             class="form-check-input"
-                             id="remember"
-                             name="remember"
-                             >
-                             <label class="form-check-label" for="remember">
-                                ingat saya
-                             </label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    placeholder="nama@email.com"
+                                    required
+                                >
                             </div>
 
-                </form>
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">
+                                    Password
+                                </label>
 
-              </div>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Masukkan password"
+                                    required
+                                >
+                            </div>
+
+                            <!-- Ingat Saya -->
+                            <div class="form-check mb-3">
+                                <input
+                                    type="checkbox"
+                                    class="form-check-input"
+                                    id="remember"
+                                    name="remember"
+                                >
+
+                                <label
+                                    class="form-check-label"
+                                    for="remember"
+                                >
+                                    Ingat saya
+                                </label>
+                            </div>
+
+                            <!-- Tombol Login -->
+                            <button
+                                type="submit"
+                                class="btn btn-login w-100"
+                            >
+                                Masuk
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
 
-<!-- bootstrap 5 js -->
- <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
 </body>
 </html>
