@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Register</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #141e30, #4f46e5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .register-box {
+      background: white;
+      width: 100%;
+      max-width: 380px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px #0003;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4f46e5;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #3730a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-box">
+    <h2>Buat Akun</h2>
+    <p>Silakan daftar akun baru</p>
+
+    <form id="registerForm">
+      <label>Nama lengkap</label>
+      <input type="text" id="nama"
+        placeholder="Masukkan nama" required>
+
+      <label>Email</label>
+      <input type="email" id="email"
+        placeholder="Masukkan email" required>
+
+      <label>Password</label>
+      <input type="password" id="password"
+        placeholder="Minimal 8 karakter"
+        minlength="8" required>
+
+      <button type="submit">Daftar</button>
+      <p id="pesan"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registerForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("pesan").textContent =
+          "Formulir berhasil diisi! Hubungkan ke server untuk membuat akun.";
+      });
+  </script>
+</body>
+</html>
